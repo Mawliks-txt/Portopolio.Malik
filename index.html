@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Sultan Malik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      overflow:hidden;
+    }
+
+    /* Floating Background */
+    .bubble{
+      position:absolute;
+      width:40px;
+      height:40px;
+      background:rgba(255,255,255,0.1);
+      border-radius:50%;
+      animation:float 10s infinite linear;
+    }
+
+    @keyframes float{
+      from{transform:translateY(100vh) scale(0.5);}
+      to{transform:translateY(-10vh) scale(1.2);}
+    }
+
+    /* Card */
+    .card{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
+      border-radius:25px;
+      padding:35px;
+      width:350px;
+      text-align:center;
+      box-shadow:0 0 30px rgba(0,255,255,0.3);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.03);
+      box-shadow:0 0 50px rgba(0,255,255,0.6);
+    }
+
+    .profile{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      border:4px solid cyan;
+      margin-bottom:15px;
+      object-fit:cover;
+    }
+
+    h1{
+      font-size:24px;
+      margin-bottom:5px;
+    }
+
+    .role{
+      color:cyan;
+      font-size:14px;
+      margin-bottom:15px;
+    }
+
+    p{
+      font-size:14px;
+      opacity:0.9;
+      margin-bottom:20px;
+    }
+
+    /* Skills */
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+      margin-bottom:20px;
+    }
+
+    .skill{
+      background:rgba(0,255,255,0.15);
+      border:1px solid cyan;
+      border-radius:20px;
+      padding:4px 12px;
+      font-size:12px;
+    }
+
+    /* Buttons */
+    .btn{
+      display:inline-block;
+      margin:5px;
+      padding:8px 18px;
+      border-radius:20px;
+      border:1px solid cyan;
+      color:cyan;
+      text-decoration:none;
+      font-size:14px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:cyan;
+      color:#003344;
+      box-shadow:0 0 15px cyan;
+    }
+
+    footer{
+      margin-top:15px;
+      font-size:12px;
+      opacity:0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Bubbles -->
+  <script>
+    for(let i=0;i<25;i++){
+      let b=document.createElement('div');
+      b.className='Tenoneast';
+      b.style.left=Math.random()*100+'%';
+      b.style.animationDuration=5+Math.random()*10+'s';
+      b.style.width=b.style.height=20+Math.random()*40+'px';
+      document.body.appendChild(b);
+    }
+  </script>
+
+  <!-- Main Card -->
+  <div class="card">
+
+    <!-- Ganti src foto kamu -->
+    <img src="https://via.placeholder.com/150" class="profile" alt="Profile">
+
+    <h1>Sultan Malik</h1>
+    <div class="role">💻 Student Developer | Student</div>
+
+    <p>
+      Saya adalah seorang Murid yang Berasal Dari Sekolah Prestasi Prima, Saya Menyukai Hal yang berbau Koding, Dan cinta damai.
+    </p>
+
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">PhotoShop</div>
+      <div class="skill">PhotoGrhapy</div>
+    </div>
+
+    <div>
+      <!-- Ganti link dengan akun kamu -->
+      <a href="https://github.com/username" class="btn" target="_blank">GitHub</a>
+      <a href="#" class="btn">Projects</a>
+      <a href="#" class="btn">Contact</a>
+    </div>
+
+    <footer>
+      ✨ Made with Passion | 2026
+    </footer>
+  </div>
+
+</body>
+</html>
